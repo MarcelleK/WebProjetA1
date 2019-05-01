@@ -2,13 +2,13 @@
 
 
 /*    Billboard    */
-.billboard{
+.billboard {
     width: 100%;
-    height: 690px;
+    height: 500px;
     position: relative;
 }
 
-.billboard.light{
+.billboard.light {
     background: url('../img/enfant32.jpg') no-repeat;
 
     background-size: cover;
@@ -18,7 +18,7 @@
 }
 
 
-.billboard .shadow{
+.billboard .shadow {
     position: absolute;
     width: 100%;
     height: 142px;
@@ -28,133 +28,134 @@
     background: url('../img/shadow.png') repeat-x;
 }
 
-.billboard .caption{
+.billboard .caption {
     margin-top: 130px;
     text-align: center;
 }
 
-.billboard .caption.light{
+.billboard .caption.light {
     color: #fff;
 }
 
-.billboard .caption.dark{
+.billboard .caption.dark {
     color: #5d5d5d;
 }
 
-.billboard .caption h1{
+.billboard .caption h1 {
     font-family: "raleway-bold";
     font-size: 50px;
     font-weight: bold;
     margin-bottom: 30px;
 }
 
-.billboard .caption.light h1{
+.billboard .caption.light h1 {
     color: #fff;
 }
 
-.billboard .caption.dark h1{
+.billboard .caption.dark h1 {
     color: #5d5d5d;
 }
 
-.billboard .caption p{
+.billboard .caption p {
     font-family: "raleway-regular";
     font-size: 18px;
     margin-bottom: 30px;
 }
 
-.billboard .caption.light p{
+.billboard .caption.light p {
     color: #fff;
 }
 
-.billboard .caption.dark p{
+.billboard .caption.dark p {
     color: #5d5d5d;
 }
 
-.billboard .caption hr{
+.billboard .caption hr {
     display: inline-block;
     height: 1px;
     width: 30px;
-    border: 0!important;
+    border: 0 !important;
     margin: 0;
     padding: 0;
 }
 
-.billboard .caption.light hr{
+.billboard .caption.light hr {
     background: #fff;
 }
 
-.billboard .caption.dark hr{
+.billboard .caption.dark hr {
     background: #5d5d5d;
 }
 
 
 /*    header    */
-header{
+header {
     width: 100%;
     height: 125px;
 }
 
-.title{
- text-align: center;
+.title {
+    text-align: center;
+    margin-top: 200px;
 }
 
-header .logo{
+header .logo {
     float: left;
     margin-top: 50px;
 }
 
-header nav{
+header nav {
     float: right;
     margin-top: 57px;
 }
 
 
-header nav ul li{
+header nav ul li {
     list-style: none;
     display: block;
     float: left;
     margin-left: 50px;
 }
 
-header nav ul li a{
+header nav ul li a {
     text-decoration: none;
     font-family: "raleway-regular";
     font-size: 16px;
 
-    transition:all .2s linear;
-    -webkit-transition:all .2s linear;
-    -moz-transition:all .2s linear;
-    -o-transition:all .2s linear;
+    transition: all .2s linear;
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -o-transition: all .2s linear;
 }
 
-header.light nav ul li a{
+header.light nav ul li a {
     color: mediumpurple;
 }
 
-header.light nav ul li a:hover{
+header.light nav ul li a:hover {
     color: #B9B9B9;
 }
 
-header.dark nav ul li a{
+header.dark nav ul li a {
     color: mediumpurple;
 }
 
-header.dark nav ul li a:hover{
+header.dark nav ul li a:hover {
     color: #919191;
 }
 
-.title{
+.title {
     text-align: center;
     color: black;
 }
 
 /*  General CSS*/
-body{
+body {
     background: #fff;
 }
 
 
-.columnNews{
+.columnNews {
     background-color: plum;
     text-align: center;
     float: left;
@@ -162,7 +163,7 @@ body{
     padding: 15px
 }
 
-.columnJoin{
+.columnJoin {
     background-color: plum;
     text-align: center;
     float: left;
@@ -170,12 +171,43 @@ body{
     padding: 15px
 }
 
-.columnPresentation{
+.columnPresentation {
     background-color: white;
     text-align: center;
     float: left;
     width: 50%;
     padding: 15px
+}
+
+.separator {
+    display: block;
+    width: 1px;
+    height: 20px;
+    background: #f6f6f6;
+    margin: 20px auto;
+}
+
+.presArticle:before,
+.presArticle:after {
+    content: " ";
+    display: table;
+}
+
+.presArticle:after {
+    clear: both;
+}
+
+.presArticle {
+    *zoom: 1;
+}
+
+
+.video h3 {
+    color: #fff;
+    font-family: "raleway-regular";
+    font-size: 14px;
+    font-weight: normal !important;
+    margin: 20px 0 0 0;
 }
 
 
@@ -187,36 +219,119 @@ body{
 }
 
 
-.wrapper{
+.wrapper {
     float: left;
     width: 1100px;
     margin: 0 auto;
 }
-.rights{
-    margin-left: auto;
-    margin-right: auto;
-    width: 1100px;
+
+/*.rights{*/
+/*    margin-left: auto;*/
+/*    margin-right: auto;*/
+/*    width: 1100px;*/
+/*}*/
+
+h1 {
+    color: deepskyblue;
 }
 
-h1, h2, h3, h4, h5 ,h6{
+h2, h3, h4, h5, h6 {
     color: mediumpurple;
     font-family: "raleway-regular", arial;
     letter-spacing: 1px;
 }
 
-h1              { font-size: 2em; margin: .67em 0 }
-h2              { font-size: 1.5em; margin: .75em 0 }
-h3              { font-size: 1.17em; margin: .83em 0 }
-h5              { font-size: .83em; margin: 1.5em 0 }
-h6              { font-size: .75em; margin: 1.67em 0 }
-h1, h2, h3, h4,
-h5, h6          { font-weight: bolder }
-
-.footer div nav ul li a{
-    list-style: none;
-    display: block;
-    float: left;
-    margin-left: 50px;
+h1 {
+    font-size: 5em;
+    margin: .67em 0
 }
+
+h2 {
+    font-size: 1.5em;
+    margin: .75em 0
+}
+
+h3 {
+    font-size: 1.17em;
+    margin: .83em 0
+}
+
+h5 {
+    font-size: .83em;
+    margin: 1.5em 0
+}
+
+h6 {
+    font-size: .75em;
+    margin: 1.67em 0
+}
+
+h1, h2, h3, h4,
+h5, h6 {
+    font-weight: bolder
+}
+
+/*.footer div nav ul li a{*/
+/*    list-style: none;*/
+/*    display: block;*/
+/*    float: left;*/
+/*    margin-left: 50px;*/
+/*    */
+
+/*}*/
+
+/*    footer    */
+footer {
+    padding: 35px 0;
+    overflow: hidden;
+}
+
+
+footer .rights p {
+    float: left;
+    color: mediumpurple;
+    font-family: "raleway-regular";
+    font-size: 13px;
+    margin: 5px 0 0 40px;
+}
+
+footer .rights p a {
+    color: mediumpurple;
+    font-family: "raleway-semibold";
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+footer nav ul {
+    float: right;
+    overflow: hidden;
+    list-style: none;
+    margin-top: 5px;
+}
+
+footer nav ul li {
+    float: left;
+    margin-left: 25px;
+}
+
+footer nav ul li a {
+    color: mediumpurple;
+    font-family: "raleway-regular";
+    font-size: 13px;
+    text-decoration: none;
+
+    transition: all .2s linear;
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -o-transition: all .2s linear;
+}
+
+footer nav ul li a:hover {
+    color: #616161;
+}
+
+
+
 
 
