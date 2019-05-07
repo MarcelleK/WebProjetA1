@@ -204,6 +204,17 @@ body {
     width: 600px;
 }
 
+.formulaireContact{
+    text-align: center;
+}
+
+.champformulairecontact{
+    float: left;
+    margin-left: 400px;
+    margin-right: 400px;
+    width: 600px;
+}
+
 .presArticle:after {
     clear: both;
 }

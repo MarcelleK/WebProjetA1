@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8"/>
+    <title>Formulaire de contact</title>
+    <link rel="shortcut icon" href="Logo1.png">
+    <link rel="stylesheet" type="text/css" href="../css/site.css">
+</head>
+
+<body>
+<section class="billboard light">
+    <header class="wrapper">
+        <a href="#"><img class="logo" src="../img/Logo1.png" alt=""/></a>
+        <nav>
+            <ul>
+                <li><a href="">A propos de nous</a></li>
+                <li><a href="">Activité</a></li>
+                <li><a href="adhesion.html" target="Adhesion">Adhésion</a></li>
+                <li><a href="">Contactez nous</a></li>
+            </ul>
+        </nav>
+        <div class="title">
+            <h1>EmASso</h1>
+            <hr>
+        </div>
+    </header>
+
+
+    <div class="shadow">
+
+    </div>
+</section>
+
+<section class="formulaireContact">
+    <h2>Formulaire de contact</h2>
+    <h4>*Informations obligatoires</h4>
+    <fieldset class="champformulairecontact" style="border:solid 1px black; padding:1px; width:620px;">
+        <legend><h4 style="text-align:center;">Contact</center></h4></legend>
+        <table>
+            <form method="POST" action="formulaire.html">
+                <tr>
+                    <th><p align="left"><label for="civilite">Civilité<em>*</em> :</label></p></th>
+                    <td>
+                        <div>
+                            <input type="radio" required="" id="Feminin" name="civilite" value="feminin" checked><label for="Feminin">Mme</label>
+                            <input type="radio" required="" id="Masculin" name="civilite" value="masculin" checked><label for="Masculin">M</label>
+
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th><p align="left"><label for="last_name">Nom<em>*</em> :</label></p></th>
+                    <td><input id="nom1"  placeholder="Votre nom" autofocus="" required=""></td>
+                    <th><p align="left"><label for="first_name">  Prénom<em>*</em> :</label></p></th>
+                    <td><input id="prenom1"  placeholder="Votre prénom" autofocus="" required=""></td>
+                </tr>
+
+                <tr>
+                    <th><label for="date_adhesion">Vous souhaitez adhérer le<em>*</em> : </label> </th>
+                    <td><input type="date" required="" name="date_adhesion"></td>
+                </tr>
+
+                <tr>
+                    <th><p align="left"><label for="tel">Téléphone : </label> </p></th>
+                    <td><input type="tel" name="tel" pattern="06[0-9]{8}"></td>
+                </tr>
+
+                <tr>
+                    <th><p align="left"><label for="email">E-mail<em>*</em> : </label> </p> </th>
+                    <td><input id="email" required="" type="email" placeholder="ex : prenom.nom@xxx.fr" required="" pattern="[a-zA-Z]*.[a-zA-Z]*@polytechnique.edu"></td>
+                </tr>
+                <span class="validity"></span>
+            </form>
+        </table>
+    </fieldset>
+
+
+    <fieldset class="champformulairecontact" style="border:solid 1px black; padding:1px; width:620px;">
+        <legend><h4>Information complémentaire</h4></legend>
+        <table>
+            <form method="POST" action="adresse.php">
+                <tr>
+                    <th><label for="date_naissance">Date de naissance : </label> </th>
+                    <td><input type="date" name="date_naissance"></td>
+                </tr>
+                <tr>
+                    <th><p align="left"><label for="adresse">Adresse : </label> </p> </th>
+                    <td><input type="text" name="adresse"></td>
+                    <th><p align="left"><label for="ville">Ville : </label> </p></th>
+                    <td><input type="text" name="ville"></td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <td><input type="text" name="adresse2"></td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <td><input type="text" name="adresse3"></td>
+                </tr>
+                <tr>
+                    <th><p align="left"><label for="code_postal">Code Postal : </label> </p></th>
+                    <td><input type="text" name="code_postal"></td>
+                    <th><p align="left"><label for="pays">Pays : </label> </p></th>
+                    <td><input type="text" name="pays"></td>
+                </tr>
+            </form>
+        </table>
+    </fieldset>
+
+    <fieldset class="champformulairecontact" style="border:solid 1px black; padding:1px; width:620px;">
+        <legend><h4>Sélectionner votre partenaire<em>*</em></h4></legend>
+        <table>
+            <form method="POST" action="adresse.php">
+                <tr>
+                    <select id="Partenariat" required="" >
+                        <option value="">--Veuillez choisir--</option>
+                        <option value="sante" name="partenaire">Sante</option>
+                        <option value="qgdjq" name="partenaire">Ecolefqehfioq</option>
+                    </select><br>
+                </tr>
+            </form>
+        </table>
+    </fieldset>
+
+    <p>
+        <input type="submit" value="Envoyer" />
+        <input type="reset" value="Annuler" />
+    </p>
+</section>
+
+
+</body>
+</html>
