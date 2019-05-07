@@ -192,6 +192,17 @@ body {
     content: " ";
     display: table;
 }
+.formulaireAdhesion{
+    text-align: center;
+
+
+}
+.champformulaireadhesion{
+    float: left;
+    margin-left: 400px;
+    margin-right: 400px;
+    width: 600px;
+}
 
 .presArticle:after {
     clear: both;

@@ -6,101 +6,127 @@
     <meta charset="UTF-8"/>
     <title>Formulaire d'adhésion</title>
     <link rel="shortcut icon" href="../img/Logo1.png">
+    <link rel="stylesheet" type="text/css" href="../css/site.css">
 </head>
-
-<h2>Formulaire d'adhésion</h2>
-<h4>*Informations obligatoires</h4>
 <body>
-<fieldset style="border:solid 1px black; padding:1px; width:620px;">
-    <legend>Informations personnelles</legend>
-    <table>
-        <form method="POST" action="adhesion.html">
-            <tr>
-                <th><p align="left"><label for="civilite">Civilité<em>*</em> :</label></p></th>
-                <td>
-                    <div>
-                        <input type="radio" id="Masculin" name="civilite" value="masculin" checked><label for="Masculin">M</label>
-                        <input type="radio" id="Feminin" name="civilite" value="feminin" checked><label for="Feminin">Mme</label>
-                    </div>
-                </td>
-            </tr>
-
-            <tr>
-                <th><p align="left"><label for="last_name">Nom<em>*</em> :</label></p></th>
-                <td><input id="nom1" placeholder="Votre nom" autofocus="" required=""></td>
-                <th><p align="left"><label for="first_name">  Prénom<em>*</em> :</label></p></th>
-                <td><input id="prenom1" placeholder="Votre prénom" autofocus="" required=""></td>
-            </tr>
-
-            <tr>
-                <th><label for="date_naissance">Date de Naissance : </label> </th>
-                <td><input type="date" name="date_naissance"></td>
-                <th><label for="lieu_naissance">  Lieu de Naissance :</label></th>
-                <td><input type="text" name="lieu_naissance" formaction="demo_form.asp"></td>
-            </tr>
-
-            <tr>
-                <th><p align="left"><label for="profession">Profession : </label></p></th>
-                <td><input type="text" name="profession"></td>
-            </tr>
-
-            <tr>
-                <th><p align="left"><label for="email">E-mail<em>*</em> : </label> </p> </th>
-                <td><input id="email" type="email" placeholder="prenom.nom@esme.fr" required="" pattern="[a-zA-Z]*.[a-zA-Z]*@polytechnique.edu"></td>
-            </tr>
-
-        </form>
-    </table>
-</fieldset>
+<section class="billboard light">
+    <header class="wrapper">
+        <a href="#"><img class="logo" src="../img/Logo1.png" alt=""/></a>
+        <nav>
+            <ul>
+                <li><a href="">A propos de nous</a></li>
+                <li><a href="">Activité</a></li>
+                <li><a href="adhesion.html" target="Adhesion">Adhésion</a></li>
+                <li><a href="">Contactez nous</a></li>
+            </ul>
+        </nav>
+        <div class="title">
+            <h1>EmASso</h1>
+            <hr>
+        </div>
+    </header>
 
 
+    <div class="shadow">
 
-<fieldset style="border:solid 1px black; padding:1px; width:620px;">
-    <legend>Contact</legend>
-    <table>
-        <form method="POST" action="adresse.php">
-            <tr>
-                <th><p align="left"><label for="adresse">Adresse : </label> </p> </th>
-                <td><input type="text" name="adresse"></td>
-                <th><p align="left"><label for="ville">Ville : </label> </p></th>
-                <td><input type="text" name="ville"></td>
-            </tr>
-            <tr>
-                <th></th>
-                <td><input type="text" name="adresse2"></td>
-            </tr>
-            <tr>
-                <th></th>
-                <td><input type="text" name="adresse3"></td>
-            </tr>
-            <tr>
-                <th><p align="left"><label for="code_postal">Code Postal : </label> </p></th>
-                <td><input type="text" name="code_postal"></td>
-                <th><p align="left"><label for="pays">Pays : </label> </p></th>
-                <td><input type="text" name="pays"></td>
-            </tr>
-            <tr>
-                <th><p align="left"><label for="tel">Téléphone : </label> </p></th>
-                <td><input type="tel" name="tel"></td>
-            </tr>
-            <input type="submit" name="valider" value="OK"/>
-        </form>
-    </table>
-</fieldset>
+    </div>
+</section>
 
-<p>
-    <input type="checkbox" name="don" value="oui">
-    Je souhaite faire un don (vous recevrez les informations nécessaires par e-mail).
-</p>
-<p>
-    <input type="checkbox" name="newsletter" value="oui">
-    Je souhaite m'inscrire à la newsletter.
-</p>
+<section class="formulaireAdhesion">
+    <h2>Formulaire d'adhésion</h2>
+    <h4>*Informations obligatoires</h4>
 
-<p>
-    <input type="submit" value="Envoyer" />
-    <input type="reset" value="Annuler" />
-</p>
+    <fieldset class="champformulaireadhesion" style="border:solid 1px black; padding:1px; width:620px;">
+        <legend>Informations personnelles</legend>
+        <table>
+            <form method="POST" action="adhesion.html">
+                <tr>
+                    <th><p align="left"><label for="civilite">Civilité<em>*</em> :</label></p></th>
+                    <td>
+                        <div>
+                            <input type="radio" id="Masculin" name="civilite" value="masculin" checked><label for="Masculin">M</label>
+                            <input type="radio" id="Feminin" name="civilite" value="feminin" checked><label for="Feminin">Mme</label>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th><p align="left"><label for="last_name">Nom<em>*</em> :</label></p></th>
+                    <td><input id="nom1" placeholder="Votre nom" autofocus="" required=""></td>
+                    <th><p align="left"><label for="first_name">  Prénom<em>*</em> :</label></p></th>
+                    <td><input id="prenom1" placeholder="Votre prénom" autofocus="" required=""></td>
+                </tr>
+
+                <tr>
+                    <th><label for="date_naissance">Date de Naissance : </label> </th>
+                    <td><input type="date" name="date_naissance"></td>
+                    <th><label for="lieu_naissance">  Lieu de Naissance :</label></th>
+                    <td><input type="text" name="lieu_naissance" formaction="demo_form.asp"></td>
+                </tr>
+
+                <tr>
+                    <th><p align="left"><label for="profession">Profession : </label></p></th>
+                    <td><input type="text" name="profession"></td>
+                </tr>
+
+                <tr>
+                    <th><p align="left"><label for="email">E-mail<em>*</em> : </label> </p> </th>
+                    <td><input id="email" type="email" placeholder="prenom.nom@esme.fr" required="" pattern="[a-zA-Z]*.[a-zA-Z]*@polytechnique.edu"></td>
+                </tr>
+
+            </form>
+        </table>
+    </fieldset>
+
+
+
+    <fieldset class="champformulaireadhesion" style="border:solid 1px black; padding:1px; width:620px;">
+        <legend>Contact</legend>
+        <table>
+            <form method="POST" action="adresse.php">
+                <tr>
+                    <th><p align="left"><label for="adresse">Adresse : </label> </p> </th>
+                    <td><input type="text" name="adresse"></td>
+                    <th><p align="left"><label for="ville">Ville : </label> </p></th>
+                    <td><input type="text" name="ville"></td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <td><input type="text" name="adresse2"></td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <td><input type="text" name="adresse3"></td>
+                </tr>
+                <tr>
+                    <th><p align="left"><label for="code_postal">Code Postal : </label> </p></th>
+                    <td><input type="text" name="code_postal"></td>
+                    <th><p align="left"><label for="pays">Pays : </label> </p></th>
+                    <td><input type="text" name="pays"></td>
+                </tr>
+                <tr>
+                    <th><p align="left"><label for="tel">Téléphone : </label> </p></th>
+                    <td><input type="tel" name="tel"></td>
+                </tr>
+                <input type="submit" name="valider" value="OK"/>
+            </form>
+        </table>
+    </fieldset>
+
+    <p>
+        <input type="checkbox" name="don" value="oui">
+        Je souhaite faire un don (vous recevrez les informations nécessaires par e-mail).
+    </p>
+    <p>
+        <input type="checkbox" name="newsletter" value="oui">
+        Je souhaite m'inscrire à la newsletter.
+    </p>
+
+    <p>
+        <input type="submit" value="Envoyer" />
+        <input type="reset" value="Annuler" />
+    </p>
+</section>
 
 </body>
 </html>
