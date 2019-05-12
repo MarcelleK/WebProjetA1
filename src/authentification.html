@@ -1,0 +1,68 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Page d'authentification</title>
+    <!-- importer le fichier de style -->
+    <link rel="stylesheet" href="style.css" media="screen" type="text/css"/>
+    <link rel="shortcut icon" href="../img/Logo1.png">
+    <link rel="stylesheet" type="text/css" href="../css/site.css">
+</head>
+
+<h2>Connexion</h2>
+<form action="#">
+    <body>
+    <section class="billboard light">
+        <header class="wrapper">
+            <a href="#"><img class="logo" src="../img/Logo1.png" alt=""/></a>
+            <nav>
+                <ul>
+                    <li><a href="">A propos de nous</a></li>
+                    <li><a href="">Se connecter</a></li>
+                    <li><a href="adhesion.html" target="Adhesion">Adhésion</a></li>
+                    <li><a href="contactez_nous.html" target="Contact">Contactez nous</a></li>
+                </ul>
+            </nav>
+            <div class="title">
+                <h1>EmASso</h1>
+                <hr>
+            </div>
+        </header>
+
+
+        <div class="shadow">
+
+        </div>
+    </section>
+
+    <section class="formulaireAuthentification">
+        <fieldset class="champformulaireauthentification" style="border:solid 1px black; padding:1px; width:620px;">
+            <legend><h4 style="text-align:center;">Se connecter</center></h4></legend>
+            <table>
+                <form method="POST" action="authentification.html">
+                    <div id="container">
+                        <!-- zone de connexion -->
+                        <form action="verification.php" method="POST">
+                            <tr>
+                                <label><br>Nom d'utilisateur :</br></label>
+                                <br><input type="text" placeholder="Entrer le nom d'utilisateur" name="username"
+                                           required=""></br>
+                            </tr>
+
+                            <tr>
+                                <label><br>Mot de passe :</br></label>
+                                <br><input type="password" placeholder="Entrer le mot de passe" name="password"
+                                           required=""></br>
+                            </tr>
+
+                            <p>
+                                <input type="submit" id='submit' value='Valider'>
+                            </p>
+
+                        </form>
+                    </div>
+                    <span class="validity"></span>
+                </form>
+        </fieldset>
+    </section>
+    </body>
+</html>

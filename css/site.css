@@ -163,7 +163,7 @@ body {
     padding: 15px
 }
 
-.columnJoin {
+.columnPartners {
     background-color: plum;
     text-align: center;
     float: left;
@@ -209,6 +209,17 @@ body {
 }
 
 .champformulairecontact{
+    float: left;
+    margin-left: 400px;
+    margin-right: 400px;
+    width: 600px;
+}
+.formulaireAuthentification{
+    text-align: center;
+}
+
+
+.champformulaireauthentification{
     float: left;
     margin-left: 400px;
     margin-right: 400px;
