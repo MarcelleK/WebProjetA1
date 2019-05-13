@@ -1,9 +1,10 @@
 <?php
 //var_dump($_POST);
 //établissement de la connexion
-$objetPdo = new PDO('mysql:host=localhost;dbname=emasso','root','');
+//mysql:host=localhost;dbname=DB;charset=UTF8
+$objetPdo = new PDO('mysql:host=localhost;dbname = emasso','root','');
 //requête d'insertion (SQL)
-$pdoStat = $objetPdo->prepare('INSERT INTO  testemma  VALUES (NULL, :civilite, :nom, :prenom, :dateNai, :lieuNai, :Metier, :mel, :tel)');
+$pdoStat = $objetPdo->prepare('INSERT INTO  adherent  VALUES (NULL, :civilite, :nom, :prenom, :dateNai, :lieuNai, :Metier, :mel, :tel)');
 //on établie la liaison
 $pdoStat->bindValue(':civilite', $_POST['civilite1'], PDO::PARAM_STR);
 $pdoStat->bindValue(':nom', $_POST['nom1'], PDO::PARAM_STR);
