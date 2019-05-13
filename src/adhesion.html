@@ -44,41 +44,41 @@
                 <form name="contact" method="POST" action="file.php" enctype="multipart/form-data">
 
                     <tr>
-                        <th><p align="left"><label for="civilite">Civilité<em>*</em> :</label></p></th>
+                        <th><p align="left"><label for="civilite1">Civilité<em>*</em> :</label></p></th>
                         <td>
                             <div>
-                                <input type="radio" id="Masculin" name="civilite" value="masculin" checked><label for="Masculin">M</label>
-                                <input type="radio" id="Feminin" name="civilite" value="feminin" checked><label for="Feminin">Mme</label>
+                                <input type="radio" id="Masculin" name="civilite1" value="Monsieur" checked><label for="Masculin">M</label>
+                                <input type="radio" id="Feminin" name="civilite1" value="Madame" checked><label for="Feminin">Mme</label>
                             </div>
                         </td>
                     </tr>
 
                     <tr>
-                        <th><p align="left"><label for="last_name">Nom<em>*</em> :</label></p></th>
-                        <td><input id="nom1" placeholder="Votre nom" autofocus="" required=""></td>
-                        <th><p align="left"><label for="first_name">  Prénom<em>*</em> :</label></p></th>
-                        <td><input id="prenom1" placeholder="Votre prénom" autofocus="" required=""></td>
+                        <th><p align="left"><label for="nom1">Nom<em>*</em> :</label></p></th>
+                        <td><input name="nom1" placeholder="Votre nom" autofocus="" required=""></td>
+                        <th><p align="left"><label for="prenom1">  Prénom<em>*</em> :</label></p></th>
+                        <td><input name="prenom1" placeholder="Votre prénom" autofocus="" required=""></td>
                     </tr>
 
                     <tr>
-                        <th><p align="left"><label for="date_naissance">Date de Naissance : </label></p> </th>
-                        <td><input type="date" name="date_naissance"></td>
-                        <th><p align="left"><label for="lieu_naissance">  Lieu de Naissance :</label></p></th>
-                        <td><input type="text" name="lieu_naissance" formaction="demo_form.asp"></td>
+                        <th><p align="left"><label for="date_naissance1">Date de Naissance : </label></p> </th>
+                        <td><input type="date" name="date_naissance1"></td>
+                        <th><p align="left"><label for="lieu_naissance1">  Lieu de Naissance :</label></p></th>
+                        <td><input type="text" name="lieu_naissance1" formaction="demo_form.asp"></td>
                     </tr>
 
                     <tr>
-                        <th><p align="left"><label for="profession">Profession<em>*</em> : </label></p></th>
-                        <td><input type="text" name="profession" required=""></td>
+                        <th><p align="left"><label for="profession1">Profession<em>*</em> : </label></p></th>
+                        <td><input type="text" name="profession1" required=""></td>
                         <th><p align="left"><label for="justificatif">Justificatif<em>*</em> : </label></p></th>
                         <td><input type=file size=40 name="attach" required=""></td>
                     </tr>
 
                     <tr>
-                        <th><p align="left"><label for="email">E-mail<em>*</em> : </label> </p> </th>
-                        <td><input id="email" type="email" placeholder="prenom.nom@esme.fr" required="" pattern="[a-zA-Z]*.[a-zA-Z]*@polytechnique.edu"></td>
-                        <th><p align="left"><label for="tel">Téléphone<em>*</em> : </label> </p></th>
-                        <td><input type="tel" required="" name="tel" ></td>
+                        <th><p align="left"><label for="email1">E-mail<em>*</em> : </label> </p> </th>
+                        <td><input name="email1" type="email" placeholder="prenom.nom@esme.fr" required="" ></td>
+                        <th><p align="left"><label for="tel1">Téléphone<em>*</em> : </label> </p></th>
+                        <td><input type="tel" required="" name="tel1" ></td>
                     </tr>
 
                 </form>
@@ -114,7 +114,7 @@
                     <tr>
 
                     </tr>
-                    <input type="submit" name="valider" value="OK"/>
+                    <!--<input type="submit" name="valider" value="OK"/>-->
                 </form>
             </table>
         </fieldset>
@@ -129,6 +129,9 @@
             <input type="submit" value="Envoyer" />
             <input type="reset" value="Annuler" />
         </p>
+
+        </body>
+    </form>
 </section>
 </body>
 </html>
