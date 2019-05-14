@@ -26,7 +26,7 @@ $connectPdo = new PDO('mysql:host=localhost;dbname=emasso','root','');
 //}
 
 //requête d'insertion (SQL)
-$pdoLiaison = $connectPdo->prepare('INSERT INTO  contactadhesion (Id, civilite, nom, prenom, dateNaissance, lieuNaissance, profession, email, tel, adresse1, adresse2, adresse3, cp, ville, pays, don) VALUES (NULL, :civilite, :nom, :prenom, :dateNai, :lieuNai, :Metier, :mel, :tel, :adress1, :adress2, :adress3, :codp, :vil, :pay, :donnation)');
+$pdoLiaison = $connectPdo->prepare('INSERT INTO  contactadhesion (Id, civilite, nom, prenom, dateNaissance, lieuNaissance, profession, email, tel, adresse1, cp, ville, pays, don) VALUES (NULL, :civilite, :nom, :prenom, :dateNai, :lieuNai, :Metier, :mel, :tel, :adress1, :codp, :vil, :pay, :donnation)');
 
 //on établie la liaison
 $pdoLiaison->bindValue(':civilite', $_POST['civilite1'], PDO::PARAM_STR);
@@ -38,8 +38,6 @@ $pdoLiaison->bindValue(':Metier', $_POST['profession1'], PDO::PARAM_STR);
 $pdoLiaison->bindValue(':mel', $_POST['email1'], PDO::PARAM_STR);
 $pdoLiaison->bindValue(':tel', $_POST['tel1'], PDO::PARAM_STR);
 $pdoLiaison->bindValue(':adress1', $_POST['adresse1'], PDO::PARAM_STR);
-$pdoLiaison->bindValue(':adress2', $_POST['adresse2'], PDO::PARAM_STR);
-$pdoLiaison->bindValue(':adress3', $_POST['adresse3'], PDO::PARAM_STR);
 $pdoLiaison->bindValue(':codp', $_POST['cp1'], PDO::PARAM_STR);
 $pdoLiaison->bindValue(':vil', $_POST['ville1'], PDO::PARAM_STR);
 $pdoLiaison->bindValue(':pay', $_POST['pays1'], PDO::PARAM_STR);
