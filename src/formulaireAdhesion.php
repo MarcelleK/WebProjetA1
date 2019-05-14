@@ -13,7 +13,7 @@ function randomPassword()
         $n = rand(0, $alphaLength);
         $passWord[] = $alphabet[$n];
     }
-    return implode($passWord); //turn the array into a string
+    return implode($passWord); //convertion du tableau en "string"
 }
 
 
