@@ -1,0 +1,16 @@
+CREATE TABLE `formcontact` (
+ `Id` int(11) NOT NULL AUTO_INCREMENT,
+ `civilite` varchar(15) NOT NULL,
+ `nom` varchar(25) NOT NULL,
+ `prenom` varchar(25) NOT NULL,
+ `dateAdhesion` date NOT NULL,
+ `tel` varchar(10) NOT NULL,
+ `mail` varchar(50) NOT NULL,
+ `dateNaissance` date DEFAULT NULL,
+ `adresse` varchar(50) DEFAULT NULL,
+ `ville` varchar(40) DEFAULT NULL,
+ `cp` int(5) DEFAULT NULL,
+ `pays` varchar(25) DEFAULT NULL,
+ `partenaire` varchar(100) DEFAULT NULL,
+ PRIMARY KEY (`Id`)
+ ) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8
