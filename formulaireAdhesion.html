@@ -17,8 +17,6 @@
 <fieldset style="border:solid 1px black; padding:1px; width:620px;">
     <legend>Contact</legend>
     <table>
-        <form name="contact" method="POST" action="file.php" enctype="multipart/form-data">
-
             <tr>
                 <th><p align="left"><label for="civilite1">Civilité<em>*</em> :</label></p></th>
                 <td>
@@ -31,73 +29,61 @@
 
             <tr>
                 <th><p align="left"><label for="nom1">Nom<em>*</em> :</label></p></th>
-                <td><input name="nom1" placeholder="Votre nom" autofocus="" required=""></td>
+                <td><input name="nom1" maxlength="30" placeholder="Votre nom" autofocus="" required=""></td>
                 <th><p align="left"><label for="prenom1">  Prénom<em>*</em> :</label></p></th>
-                <td><input name="prenom1" placeholder="Votre prénom" autofocus="" required=""></td>
+                <td><input name="prenom1" maxlength="20" placeholder="Votre prénom" autofocus="" required=""></td>
             </tr>
 
             <tr>
                 <th><p align="left"><label for="date_naissance1">Date de Naissance : </label></p> </th>
                 <td><input type="date" name="date_naissance1"></td>
                 <th><p align="left"><label for="lieu_naissance1">  Lieu de Naissance :</label></p></th>
-                <td><input type="text" name="lieu_naissance1" formaction="demo_form.asp"></td>
+                <td><input type="text" name="lieu_naissance1" maxlength="20" formaction="demo_form.asp"></td>
             </tr>
 
             <tr>
                 <th><p align="left"><label for="profession1">Profession<em>*</em> : </label></p></th>
-                <td><input type="text" name="profession1" required=""></td>
+                <td><input type="text" name="profession1" maxlength="20" required=""></td>
                 <th><p align="left"><label for="justificatif">Justificatif<em>*</em> : </label></p></th>
-                <td><input type=file size=40 name="attach" required=""></td>
+                <td><input type="file" size="40" name="justificatif" required=""></td>
             </tr>
 
             <tr>
                 <th><p align="left"><label for="email1">E-mail<em>*</em> : </label> </p> </th>
                 <td><input name="email1" type="email" placeholder="prenom.nom@esme.fr" required="" ></td>
 				<th><p align="left"><label for="tel1">Téléphone<em>*</em> : </label> </p></th>
-                <td><input type="tel" required="" name="tel1" ></td>
+                <td><input type="int" maxlength="20" required="" name="tel1" ></td>
             </tr>
-
-        </form>
-    </table>
-</fieldset>
-
-
-
-<fieldset style="border:solid 1px black; padding:1px; width:620px;">
-    <legend>Informations personnelles</legend>
-    <table>
-        <form method="POST" action="insert.php">
-            <tr>
-                <th><p align="left"><label for="Adresse1">Adresse : </label> </p> </th>
-                <td><input type="text" name="Adresse1"></td>
-                <th><p align="left"><label for="Ville">Ville : </label> </p></th>
-                <td><input type="text" name="Ville"></td>
+						
+			            <tr>
+                <th><p align="left"><label for="adresse1">Adresse : </label> </p> </th>
+                <td><input type="text" maxlength="20" name="adresse1"></td>
+                <th><p align="left"><label for="ville1">Ville : </label> </p></th>
+                <td><input type="text" maxlength="20" name="ville1"></td>
             </tr>
             <tr>
                 <th></th>
-                <td><input type="text" name="Adresse2"></td>
+                <td><input type="text" maxlength="20" name="adresse2"></td>
             </tr>
             <tr>
                 <th></th>
-                <td><input type="text" name="Adresse3"></td>
+                <td><input type="text" maxlength="20" name="adresse3"></td>
             </tr>
             <tr>
-                <th><p align="left"><label for="CP">Code Postal : </label> </p></th>
-                <td><input type="text" name="CP"></td>
-                <th><p align="left"><label for="Pays">Pays : </label> </p></th>
-                <td><input type="text" name="Pays"></td>
+                <th><p align="left"><label for="cp1">Code Postal : </label> </p></th>
+                <td><input type="text" maxlength="5" name="cp1"></td>
+                <th><p align="left"><label for="pays1">Pays : </label> </p></th>
+                <td><input type="text" maxlength="25" name="pays1"></td>
             </tr>
             <tr>
-
             </tr>
-            <!--<input type="submit" name="valider" value="OK"/>-->
-        </form>
     </table>
 </fieldset>
 
 <p>
-    <input type="checkbox" name="don" value="oui">
-    Je souhaite faire un don (vous recevrez les informations nécessaires par e-mail).
+    Je souhaite faire un don (vous recevrez les informations nécessaires par e-mail) : 
+        <input type="radio" id="donOui" name="don" value="Oui" checked><label for="donOui">Oui</label>
+        <input type="radio" id="donNon" name="don" value="Non" checked><label for="donNon">Non</label>
 </p>
 
 
