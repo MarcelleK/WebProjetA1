@@ -1,0 +1,20 @@
+
+CREATE TABLE `contactadhesion` (
+ `Id` int(11) NOT NULL AUTO_INCREMENT,
+ `civilite` varchar(15) NOT NULL,
+ `nom` varchar(25) NOT NULL,
+ `prenom` varchar(25) NOT NULL,
+ `dateNaissance` date DEFAULT NULL,
+ `lieuNaissance` varchar(50) DEFAULT NULL,
+ `profession` varchar(50) NOT NULL,
+ `email` varchar(50) NOT NULL,
+ `tel` varchar(30) NOT NULL,
+ `adresse1` varchar(50) DEFAULT NULL,
+ `adresse2` varchar(50) DEFAULT NULL,
+ `adresse3` varchar(50) DEFAULT NULL,
+ `cp` int(5) DEFAULT NULL,
+ `ville` varchar(50) DEFAULT NULL,
+ `pays` varchar(50) DEFAULT NULL,
+ `don` varchar(5) NOT NULL,
+ PRIMARY KEY (`Id`)
+ ) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=utf8 
