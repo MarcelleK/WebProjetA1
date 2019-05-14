@@ -29,21 +29,21 @@
 
             <tr>
                 <th><p align="left"><label for="nom1">Nom<em>*</em> :</label></p></th>
-                <td><input name="nom1" maxlength="30" placeholder="Votre nom" autofocus="" required=""></td>
+                <td><input name="nom1" maxlength="30" placeholder="Votre nom" autofocus="" required="" pattern="[a-zA-Z ]*"></td>
                 <th><p align="left"><label for="prenom1">  Prénom<em>*</em> :</label></p></th>
-                <td><input name="prenom1" maxlength="20" placeholder="Votre prénom" autofocus="" required=""></td>
+                <td><input name="prenom1" maxlength="20" placeholder="Votre prénom" autofocus="" required="" pattern="[a-zA-Z ]*"></td>
             </tr>
 
             <tr>
                 <th><p align="left"><label for="date_naissance1">Date de Naissance : </label></p> </th>
                 <td><input type="date" name="date_naissance1"></td>
                 <th><p align="left"><label for="lieu_naissance1">  Lieu de Naissance :</label></p></th>
-                <td><input type="text" name="lieu_naissance1" maxlength="20" formaction="demo_form.asp"></td>
+                <td><input type="text" name="lieu_naissance1" maxlength="20" formaction="demo_form.asp" pattern="[a-zA-Z ]*"></td>
             </tr>
 
             <tr>
                 <th><p align="left"><label for="profession1">Profession<em>*</em> : </label></p></th>
-                <td><input type="text" name="profession1" maxlength="20" required=""></td>
+                <td><input type="text" name="profession1" maxlength="20" required="" pattern="[a-zA-Z ]*"></td>
                 <th><p align="left"><label for="justificatif">Justificatif<em>*</em> : </label></p></th>
                 <td><input type="file" size="40" name="justificatif" required=""></td>
             </tr>
@@ -52,14 +52,14 @@
                 <th><p align="left"><label for="email1">E-mail<em>*</em> : </label> </p> </th>
                 <td><input name="email1" type="email" placeholder="prenom.nom@esme.fr" required="" ></td>
 				<th><p align="left"><label for="tel1">Téléphone<em>*</em> : </label> </p></th>
-                <td><input type="int" maxlength="20" required="" name="tel1" ></td>
+                <td><input type="int" maxlength="20" required="" name="tel1" pattern="[0-9]{10}" ></td>
             </tr>
 						
-			            <tr>
+			<tr>
                 <th><p align="left"><label for="adresse1">Adresse : </label> </p> </th>
                 <td><input type="text" maxlength="20" name="adresse1"></td>
                 <th><p align="left"><label for="ville1">Ville : </label> </p></th>
-                <td><input type="text" maxlength="20" name="ville1"></td>
+                <td><input type="text" maxlength="20" name="ville1" pattern="[a-zA-Z ]*"></td>
             </tr>
             <tr>
                 <th></th>
@@ -71,9 +71,9 @@
             </tr>
             <tr>
                 <th><p align="left"><label for="cp1">Code Postal : </label> </p></th>
-                <td><input type="text" maxlength="5" name="cp1"></td>
+                <td><input type="text" maxlength="5" name="cp1" pattern="[0-9]{5}"></td>
                 <th><p align="left"><label for="pays1">Pays : </label> </p></th>
-                <td><input type="text" maxlength="25" name="pays1"></td>
+                <td><input type="text" maxlength="25" name="pays1" pattern="[a-zA-Z ]*"></td>
             </tr>
             <tr>
             </tr>
@@ -91,7 +91,6 @@
     <input type="submit" value="Envoyer" />
     <input type="reset" value="Annuler" />
 </p>
-
 </body>
 </form>
 </html>
