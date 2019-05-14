@@ -36,89 +36,76 @@
     <h2>Formulaire d'adhésion</h2>
     <h4>Veuillez compléter le formulaire.</h4>
     <h4>*Informations obligatoires</h4>
-    <form class="champformulaireadhesion" name="contact" method="POST" action="formulaireAdhesion.php" enctype="multipart/form-data">
+    <form class="champformulaireadhesion" name="contact" method="POST" action="formulaireAdhesion.php"
+          enctype="multipart/form-data">
         <body>
         <fieldset style="border:solid 1px black; padding:1px; width:620px;">
             <legend>Contact</legend>
             <table>
                 <tr>
-                    <th><p align="left"><label for="civilite1">Civilité<em>*</em> :</label></p></th>
+                    <th><p align="left"><label for="civilite2">Civilité<em>*</em> :</label></p></th>
                     <td>
-                        <div>
-                            <input type="radio" id="Masculin" name="civilite1" value="Monsieur" checked><label for="Masculin">M</label>
-                            <input type="radio" id="Feminin" name="civilite1" value="Madame" checked><label for="Feminin">Mme</label>
-                        </div>
+                        <input type="radio" required="" id="Feminin" name="civilite2" value="feminin" checked><label
+                            for="Feminin">Mme</label>
+                        <input type="radio" required="" id="Masculin" name="civilite2" value="masculin" checked><label
+                            for="Masculin">M</label>
                     </td>
                 </tr>
 
                 <tr>
                     <th><p align="left"><label for="nom1">Nom<em>*</em> :</label></p></th>
-                    <td><input name="nom1" maxlength="30" placeholder="Votre nom" autofocus="" required=""></td>
-                    <th><p align="left"><label for="prenom1">  Prénom<em>*</em> :</label></p></th>
-                    <td><input name="prenom1" maxlength="20" placeholder="Votre prénom" autofocus="" required=""></td>
+                    <td><input name="nom1" maxlength="30" placeholder="Votre nom" autofocus=""
+                               pattern="[a-zA-ZàâæçéèêëîïôœùûüÿÀÂÆÇnÉÈÊËÎÏÔŒÙÛÜŸ-]"></td>
+                    <th><p align="left"><label for="prenom1"> Prénom<em>*</em> :</label></p></th>
+                    <td><input name="prenom1" maxlength="20" placeholder="Votre prénom" autofocus=""
+                               pattern="[a-zA-ZàâæçéèêëîïôœùûüÿÀÂÆÇnÉÈÊËÎÏÔŒÙÛÜŸ-]"></td>
                 </tr>
-
                 <tr>
-                    <th><p align="left"><label for="date_naissance1">Date de Naissance : </label></p> </th>
+                    <th><p align="left"><label for="date_naissance1">Date de Naissance : </label></p></th>
                     <td><input type="date" name="date_naissance1"></td>
-                    <th><p align="left"><label for="lieu_naissance1">  Lieu de Naissance :</label></p></th>
+                    <th><p align="left"><label for="lieu_naissance1"> Lieu de Naissance :</label></p></th>
                     <td><input type="text" name="lieu_naissance1" maxlength="20" formaction="demo_form.asp"></td>
                 </tr>
-
                 <tr>
                     <th><p align="left"><label for="profession1">Profession<em>*</em> : </label></p></th>
-                    <td><input type="text" name="profession1" maxlength="20" required=""></td>
-                    <th><p align="left"><label for="justificatif">Justificatif<em>*</em> : </label></p></th>
-                    <td><input type="file" size="40" name="justificatif" required=""></td>
+                    <td><input type="text" name="profession1" maxlength="20"></td>
                 </tr>
-
                 <tr>
-                    <th><p align="left"><label for="email1">E-mail<em>*</em> : </label> </p> </th>
-                    <td><input name="email1" type="email" placeholder="prenom.nom@esme.fr" required="" ></td>
-                    <th><p align="left"><label for="tel1">Téléphone<em>*</em> : </label> </p></th>
-                    <td><input type="int" maxlength="20" required="" name="tel1" ></td>
-                </tr>
-
-                <tr>
-                    <th><p align="left"><label for="adresse1">Adresse : </label> </p> </th>
+                    <th><p align="left"><label for="email1">E-mail<em>*</em> : </label></p></th>
+                    <td><input name="email1" type="email" placeholder="prenom.nom@esme.fr"></td>
+                    <th><p align="left"><label for="tel1">Téléphone<em>*</em> : </label></p></th>
+                    <td><input type="int" maxlength="10" name="tel1" pattern="[0-9]{10}></td>
+            </tr>
+		 	            <tr>
+                <th><p align=" left"><label for="adresse1">Adresse : </label> </p>
+                    </th>
                     <td><input type="text" maxlength="20" name="adresse1"></td>
-                    <th><p align="left"><label for="ville1">Ville : </label> </p></th>
-                    <td><input type="text" maxlength="20" name="ville1"></td>
+                    <th><p align="left"><label for="ville1">Ville : </label></p></th>
+                    <td><input type="text" maxlength="20" name="ville1"
+                               pattern="[a-zA-ZàâæçéèêëîïôœùûüÿÀÂÆÇnÉÈÊËÎÏÔŒÙÛÜŸ-]"></td>
                 </tr>
+
                 <tr>
-                    <th></th>
-                    <td><input type="text" maxlength="20" name="adresse2"></td>
-                </tr>
-                <tr>
-                    <th></th>
-                    <td><input type="text" maxlength="20" name="adresse3"></td>
-                </tr>
-                <tr>
-                    <th><p align="left"><label for="cp1">Code Postal : </label> </p></th>
-                    <td><input type="text" maxlength="5" name="cp1"></td>
-                    <th><p align="left"><label for="pays1">Pays : </label> </p></th>
-                    <td><input type="text" maxlength="25" name="pays1"></td>
-                </tr>
-                <tr>
+                    <th><p align="left"><label for="cp1">Code Postal : </label></p></th>
+                    <td><input type="text" maxlength="5" name="cp1" pattern="[0-9"></td>
+                    <th><p align="left"><label for="pays1">Pays : </label></p></th>
+                    <td><input type="text" maxlength="25" name="pays1"
+                               pattern="[a-zA-ZàâæçéèêëîïôœùûüÿÀÂÆÇnÉÈÊËÎÏÔŒÙÛÜŸ-]"></td>
                 </tr>
             </table>
         </fieldset>
-
         <p>
             Je souhaite faire un don (vous recevrez les informations nécessaires par e-mail) :
             <input type="radio" id="donOui" name="don" value="Oui" checked><label for="donOui">Oui</label>
             <input type="radio" id="donNon" name="don" value="Non" checked><label for="donNon">Non</label>
         </p>
-
-
         <p>
-            <input type="submit" value="Envoyer" />
-            <input type="reset" value="Annuler" />
+            <input type="submit" value="Envoyer"/>
+            <input type="reset" value="Annuler"/>
         </p>
-
-        </body>
     </form>
-</section>
+    <p style="color:red;" id="erreur"></p>
+    <script src="formulaireAdhesion.js"></script>
 </body>
 </html>
 

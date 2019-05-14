@@ -38,31 +38,27 @@
         <fieldset class="champformulaireauthentification" style="border:solid 1px black; padding:1px; width:620px;">
             <legend><h4 style="text-align:center;">Se connecter</center></h4></legend>
             <table>
-                <form method="POST" action="authentification.html">
-                    <div id="container">
-                        <!-- zone de connexion -->
-                        <form action="verification.php" method="POST">
-                            <tr>
-                                <label><br>Nom d'utilisateur :</br></label>
-                                <br><input type="text" placeholder="Entrer le nom d'utilisateur" name="username"
-                                           required=""></br>
-                            </tr>
+                <tr>
+                    <label><br>Nom d'utilisateur :</br></label>
+                    <br><input type="text" placeholder="Entrer le nom d'utilisateur" name="identifiant"
+                               id="identifiant"></br>
+                </tr>
 
-                            <tr>
-                                <label><br>Mot de passe :</br></label>
-                                <br><input type="password" placeholder="Entrer le mot de passe" name="password"
-                                           required=""></br>
-                            </tr>
+                <tr>
+                    <label><br>Mot de passe :</br></label>
+                    <br><input type="password" placeholder="Entrer le mot de passe" name="mot de passe"
+                               id="mot de passe"></br>
+                </tr>
+            </table>
+            <p>
+                <input type="submit" value="Valider">
+                <input type="reset" value="Annuler"/>
+            </p>
+</form>
 
-                            <p>
-                                <input type="submit" id='submit' value='Valider'>
-                            </p>
-
-                        </form>
-                    </div>
-                    <span class="validity"></span>
-                </form>
-        </fieldset>
-    </section>
-    </body>
+<p style="color:red;" id="erreur"></p>
+<script src="authentification.js"></script>
+</fieldset>
+</section>
+</body>
 </html>
