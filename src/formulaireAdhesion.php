@@ -2,25 +2,27 @@
 //var_dump($_POST);
 //établissement de la connexion
 $connectPdo = new PDO('mysql:host=localhost;dbname=emasso','root','');
-//test pour fichier
-//if(!empty($_FILES)){
-//$file_name = $_FILES['justificatif']['name'];
-//$file_extension = strrchr($file_name,".");
-//$file_tmp_name = $_FILES['justificatif']['tmp_name'];
-//$file_dest = 'PiecesJointes'.$file_name;
-//$extensions_autorisees = array('.pdf','.PDF');
-//if(in_array($file_extension, $extensions_autorisees)){
-//if(move_uploaded_file($file_tmp_name, $file_dest)){
-//$req = $db->prepare('INSERT INTO testemma(nomFichier, fileURL) VALUES(?,?)');
-//$req = execute(array($file_name, $file_dest));
-//echo 'Fichier envoyé avec succès';
-//}else{
-//echo "Une erreur est survenue lors de l'envoi du fichier";
-//}
-//}else {echo 'Seuls les fichiers PDF sont autorisés';
-//}
-//}
-//requête d'insertion (SQL)
+
+//generation mot de passe aléatoire
+function randomPassword() {
+    $alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
+    $passWord = array(); //un tableau
+    $alphaLength = strlen($alphabet) - 1;
+    for ($i = 0; $i < 8; $i++) {
+        $n = rand(0, $alphaLength);
+        $passWord[] = $alphabet[$n];
+    }
+    return implode($passWord); //turn the array into a string
+}
+
+
+//requête d'insertion (SQL) dans la table authentification
+$pdoLiaisonInAuthentification = $connectPdo->prepare('INSERT INTO authentification VALUES (NULL, :email, : motDePasse)');
+$pdoLiaisonInAuthentification->bindValue(':email',$_POST['email1'], PDO::PARAM_STR);
+$pdoLiaisonInAuthentification->bindValue(':motDePasse', $_POST[randomPassword()], PDO::PARAM_STR);
+
+
+//requête d'insertion (SQL) dans la table adhérent
 $pdoLiaison = $connectPdo->prepare('INSERT INTO  adherent  VALUES (NULL, :civilite, :nom, :prenom, :dateNai, :lieuNai, :Metier, :mel, :tel, :adress1, :adress2, :adress3, :codp, :vil, :pay, :donnation)');
 //on établie la liaison
 $pdoLiaison->bindValue(':civilite', $_POST['civilite1'], PDO::PARAM_STR);
