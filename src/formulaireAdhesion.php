@@ -1,10 +1,11 @@
 <?php
 //var_dump($_POST);
 //établissement de la connexion
-$connectPdo = new PDO('mysql:host=localhost;dbname=emasso','root','');
+$connectPdo = new PDO('mysql:host=localhost;dbname=emasso', 'root', '');
 
 //generation mot de passe aléatoire
-function randomPassword() {
+function randomPassword()
+{
     $alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
     $passWord = array(); //un tableau
     $alphaLength = strlen($alphabet) - 1;
@@ -16,12 +17,6 @@ function randomPassword() {
 }
 
 
-//requête d'insertion (SQL) dans la table authentification
-$pdoLiaisonInAuthentification = $connectPdo->prepare('INSERT INTO authentification VALUES (NULL, :email, : motDePasse)');
-$pdoLiaisonInAuthentification->bindValue(':email',$_POST['email1'], PDO::PARAM_STR);
-$pdoLiaisonInAuthentification->bindValue(':motDePasse', $_POST[randomPassword()], PDO::PARAM_STR);
-
-
 //requête d'insertion (SQL) dans la table adhérent
 $pdoLiaison = $connectPdo->prepare('INSERT INTO  adherent  VALUES (NULL, :civilite, :nom, :prenom, :dateNai, :lieuNai, :Metier, :mel, :tel, :adress1, :adress2, :adress3, :codp, :vil, :pay, :donnation)');
 //on établie la liaison
@@ -31,8 +26,6 @@ $pdoLiaison->bindValue(':prenom', $_POST['prenom1'], PDO::PARAM_STR);
 $pdoLiaison->bindValue(':dateNai', $_POST['date_naissance1'], PDO::PARAM_STR);
 $pdoLiaison->bindValue(':lieuNai', $_POST['lieu_naissance1'], PDO::PARAM_STR);
 $pdoLiaison->bindValue(':Metier', $_POST['profession1'], PDO::PARAM_STR);
-//$pdoLiaison->bindValue(':nomFichier', $_POST['profession1'], PDO::PARAM_STR);
-//$pdoLiaison->bindValue(':fileURL', $_POST['profession1'], PDO::PARAM_STR);
 $pdoLiaison->bindValue(':mel', $_POST['email1'], PDO::PARAM_STR);
 $pdoLiaison->bindValue(':tel', $_POST['tel1'], PDO::PARAM_STR);
 $pdoLiaison->bindValue(':adress1', $_POST['adresse1'], PDO::PARAM_STR);
@@ -42,12 +35,20 @@ $pdoLiaison->bindValue(':codp', $_POST['cp1'], PDO::PARAM_STR);
 $pdoLiaison->bindValue(':vil', $_POST['ville1'], PDO::PARAM_STR);
 $pdoLiaison->bindValue(':pay', $_POST['pays1'], PDO::PARAM_STR);
 $pdoLiaison->bindValue(':donnation', $_POST['don'], PDO::PARAM_STR);
+
+
+//requête d'insertion (SQL) dans la table authentification
+$pdoLiaisonInAuthentification = $connectPdo->prepare('INSERT INTO authentification VALUES (NULL, :email, :motDePasse)');
+$pdoLiaisonInAuthentification->bindValue(':email', $_POST['email1'], PDO::PARAM_STR);
+$pdoLiaisonInAuthentification->bindValue(':motDePasse', randomPassword(), PDO::PARAM_STR);
+
 //éxecution de la requête
 $insertIsOK = $pdoLiaison->execute();
-if($insertIsOK){
-    $message = 'Le contact a été ajouté dans la bdd';
-}
-else{
+$insertIsOK2 = $pdoLiaisonInAuthentification ->execute();
+if ($insertIsOK && $insertIsOK2) {
+    $message = 'Le contact a été ajouté dans la bdd! Vous recevrez vos identifiant
+     de connexion si votre candidature est acceptée';
+} else {
     $message = 'Echec de l\insertion';
 }
 ?>
