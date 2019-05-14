@@ -1,0 +1,33 @@
+<html>
+    <head>
+       <meta charset="utf-8">
+	   <title>Page d'authentification</title>
+        <!-- importer le fichier de style -->
+        <link rel="stylesheet" href="style.css" media="screen" type="text/css" />
+    </head>
+	
+	<h2>Connexion</h2>
+	<form method="POST" id="connecter">
+    <body>
+	    <legend><h4 style="text-align:center;">Se connecter</center></h4></legend>
+		<table>
+                <tr>			
+                     <label><br>Nom d'utilisateur :</br></label>
+                     <br><input type="text" placeholder="Entrer le nom d'utilisateur" name="identifiant" id="identifiant"></br>
+				</tr>
+				
+				<tr>
+                     <label><br>Mot de passe :</br></label>
+                     <br><input type="password" placeholder="Entrer le mot de passe" name="mot de passe" id="mot de passe"></br>
+			    </tr>
+		</table>
+	<p>
+		 <input type="submit" value="Valider" >
+		 <input type="reset" value="Annuler" />
+	</p>		
+	    </form>
+		
+<p style= "color:red;" id="erreur"></p>
+<script src="authentification.js"></script>
+</body>
+</html>
