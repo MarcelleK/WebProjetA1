@@ -42,15 +42,28 @@ $pdoLiaisonInAuthentification = $connectPdo->prepare('INSERT INTO authentificati
 $pdoLiaisonInAuthentification->bindValue(':email', $_POST['email1'], PDO::PARAM_STR);
 $pdoLiaisonInAuthentification->bindValue(':motDePasse', randomPassword(), PDO::PARAM_STR);
 
+//requête pour la connexion des membres
+$pdoConnexion = $connectPdo->prepare('INSERT INTO connexion VALUES (NULL, :login, :motDePasse)');
+$pdoConnexion->bindValue(':login', $_POST['username'], PDO::PARAM_STR);
+$pdoConnexion->bindValue(':motDePasse', $_POST['password'], PDO::PARAM_STR);
+
+
 //éxecution de la requête
 $insertIsOK = $pdoLiaison->execute();
 $insertIsOK2 = $pdoLiaisonInAuthentification ->execute();
+$insertIsOK3 = $pdoConnexion->execute();
 if ($insertIsOK && $insertIsOK2) {
     $message = 'Le contact a été ajouté dans la bdd! Vous recevrez vos identifiant
      de connexion si votre candidature est acceptée';
 } else {
     $message = 'Echec de l\insertion';
 }
+
+//if ($insertIsOK3){
+//    $message = 'connexion réussi';
+//} else{
+//    $message = 'échec connexion';
+//}
 ?>
 
 <!doctype html>
