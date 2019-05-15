@@ -1,4 +1,4 @@
-CREATE TABLE `contactadhesion` (
+CREATE TABLE `adherent` (
  `Id` int(11) NOT NULL AUTO_INCREMENT,
  `civilite` varchar(15) NOT NULL,
  `nom` varchar(25) NOT NULL,
