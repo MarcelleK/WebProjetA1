@@ -1,5 +1,5 @@
 <?php
-
+//var_dump($_POST);
 //établissement de la connexion
 $connectPdo = new PDO('mysql:host=localhost;dbname=emasso', 'root', '');
 
@@ -16,21 +16,6 @@ function randomPassword()
     return implode($passWord); //convertion du tableau en "string"
 }
 
-//requête d'insertion (SQL) dans la table contact
-$pdoContact = $connectPdo->prepare('INSERT INTO  contact  VALUES (NULL, :civilite, :nom, :prenom, :dateAdhesion, :tel, :mail, :dateNaissance, :adresse, :ville, :cp, :pays, :partenariat)');
-$pdoContact->bindValue(':civilite', $_POST['civilite2'], PDO::PARAM_STR);
-$pdoContact->bindValue(':nom', $_POST['nom2'], PDO::PARAM_STR);
-$pdoContact->bindValue(':prenom', $_POST['prenom2'], PDO::PARAM_STR);
-$pdoContact->bindValue(':dateAdhesion', $_POST['date_adhesion2'], PDO::PARAM_STR);
-$pdoContact->bindValue(':tel', $_POST['tel2'], PDO::PARAM_STR);
-$pdoContact->bindValue(':mail', $_POST['email2'], PDO::PARAM_STR);
-$pdoContact->bindValue(':dateNaissance', $_POST['date_naissance2'], PDO::PARAM_STR);
-$pdoContact->bindValue(':adresse', $_POST['adesse2'], PDO::PARAM_STR);
-$pdoContact->bindValue(':ville', $_POST['ville2'], PDO::PARAM_STR);
-$pdoContact->bindValue(':cp', $_POST['tel2'], PDO::PARAM_STR);
-$pdoContact->bindValue(':pays', $_POST['pays2'], PDO::PARAM_STR);
-$pdoContact->bindValue(':partenariat', $_POST['partenariat2'], PDO::PARAM_STR);
-
 
 //requête d'insertion (SQL) dans la table adhérent
 $pdoLiaison = $connectPdo->prepare('INSERT INTO  adherent  VALUES (NULL, :civilite, :nom, :prenom, :dateNai, :lieuNai, :Metier, :mel, :tel, :adress1, :codp, :vil, :pay, :donnation)');
@@ -43,7 +28,7 @@ $pdoLiaison->bindValue(':lieuNai', $_POST['lieu_naissance1'], PDO::PARAM_STR);
 $pdoLiaison->bindValue(':Metier', $_POST['profession1'], PDO::PARAM_STR);
 $pdoLiaison->bindValue(':mel', $_POST['email1'], PDO::PARAM_STR);
 $pdoLiaison->bindValue(':tel', $_POST['tel1'], PDO::PARAM_STR);
-$pdoLiaison->bindValue(':adress1', $_POST['adresse1'], PDO::PARAM_STR);
+$pdoLiaison->bindValue(':adress1', $_POST['adresse'], PDO::PARAM_STR);
 $pdoLiaison->bindValue(':codp', $_POST['cp1'], PDO::PARAM_STR);
 $pdoLiaison->bindValue(':vil', $_POST['ville1'], PDO::PARAM_STR);
 $pdoLiaison->bindValue(':pay', $_POST['pays1'], PDO::PARAM_STR);
@@ -56,20 +41,15 @@ $pdoLiaisonInAuthentification->bindValue(':email', $_POST['email1'], PDO::PARAM_
 $pdoLiaisonInAuthentification->bindValue(':motDePasse', randomPassword(), PDO::PARAM_STR);
 
 //requête pour la connexion des membres
-$pdoConnexion = $connectPdo->prepare('INSERT INTO connexion VALUES (NULL, :login, :motDePasse)');
-$pdoConnexion->bindValue(':login', $_POST['username'], PDO::PARAM_STR);
-$pdoConnexion->bindValue(':motDePasse', $_POST['password'], PDO::PARAM_STR);
+//$pdoConnexion = $connectPdo->prepare('INSERT INTO connexion VALUES (NULL, :login, :motDePasse)');
+//$pdoConnexion->bindValue(':login', $_POST['username'], PDO::PARAM_STR);
+//$pdoConnexion->bindValue(':motDePasse', $_POST['password'], PDO::PARAM_STR);
 
 
 //éxecution de la requête
 $insertIsOK = $pdoLiaison->execute();
 $insertIsOK2 = $pdoLiaisonInAuthentification ->execute();
-$insertIsOK3 = $pdoConnexion->execute();
-$insertIsOK4 = $pdoContact->execute();
-
-
-
-
+//$insertIsOK3 = $pdoConnexion->execute();
 if ($insertIsOK && $insertIsOK2) {
     $message = 'Le contact a été ajouté dans la bdd! Vous recevrez vos identifiant
      de connexion si votre candidature est acceptée';
@@ -77,6 +57,11 @@ if ($insertIsOK && $insertIsOK2) {
     $message = 'Echec de l\insertion';
 }
 
+//if ($insertIsOK3){
+//    $message = 'connexion réussi';
+//} else{
+//    $message = 'échec connexion';
+//}
 ?>
 
 <!doctype html>
