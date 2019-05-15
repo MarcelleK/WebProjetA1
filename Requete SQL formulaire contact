@@ -1,3 +1,4 @@
+
 CREATE TABLE `formcontact` (
  `Id` int(11) NOT NULL AUTO_INCREMENT,
  `civilite` varchar(15) NOT NULL,
@@ -13,4 +14,4 @@ CREATE TABLE `formcontact` (
  `pays` varchar(25) DEFAULT NULL,
  `partenaire` varchar(100) DEFAULT NULL,
  PRIMARY KEY (`Id`)
- ) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8
+ ) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=utf8 

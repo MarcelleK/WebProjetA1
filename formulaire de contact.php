@@ -26,29 +26,29 @@ $connectPdo = new PDO('mysql:host=localhost;dbname=emasso','root','');
 //}
 
 //requête d'insertion (SQL)
-$pdoLiaison = $connectPdo->prepare('INSERT INTO  contactadhesion (Id, civilite, nom, prenom, dateNaissance, lieuNaissance, profession, email, tel, adresse1, cp, ville, pays, don) VALUES (NULL, :civilite, :nom, :prenom, :dateNai, :lieuNai, :Metier, :mel, :tel, :adress1, :codp, :vil, :pay, :donnation)');
+$pdoLiaison = $connectPdo->prepare('INSERT INTO  formcontact  VALUES (NULL, :civilite, :nom, :prenom, :dateAdhesion, :tel, :mail, :dateNaissance, :adresse, :ville, :cp, :pays, :partenariat)');
 
 //on établie la liaison
-$pdoLiaison->bindValue(':civilite', $_POST['civilite1'], PDO::PARAM_STR);
-$pdoLiaison->bindValue(':nom', $_POST['nom1'], PDO::PARAM_STR);
-$pdoLiaison->bindValue(':prenom', $_POST['prenom1'], PDO::PARAM_STR);
-$pdoLiaison->bindValue(':dateNai', $_POST['date_naissance1'], PDO::PARAM_STR);
-$pdoLiaison->bindValue(':lieuNai', $_POST['lieu_naissance1'], PDO::PARAM_STR);
-$pdoLiaison->bindValue(':Metier', $_POST['profession1'], PDO::PARAM_STR);
-$pdoLiaison->bindValue(':mel', $_POST['email1'], PDO::PARAM_STR);
-$pdoLiaison->bindValue(':tel', $_POST['tel1'], PDO::PARAM_STR);
-$pdoLiaison->bindValue(':adress1', $_POST['adresse1'], PDO::PARAM_STR);
-$pdoLiaison->bindValue(':codp', $_POST['cp1'], PDO::PARAM_STR);
-$pdoLiaison->bindValue(':vil', $_POST['ville1'], PDO::PARAM_STR);
-$pdoLiaison->bindValue(':pay', $_POST['pays1'], PDO::PARAM_STR);
-$pdoLiaison->bindValue(':donnation', $_POST['don'], PDO::PARAM_STR);
-
+$pdoLiaison->bindValue(':civilite', $_POST['civilite2'], PDO::PARAM_STR);
+$pdoLiaison->bindValue(':nom', $_POST['nom2'], PDO::PARAM_STR);
+$pdoLiaison->bindValue(':prenom', $_POST['prenom2'], PDO::PARAM_STR);
+$pdoLiaison->bindValue(':dateAdhesion', $_POST['date_adhesion2'], PDO::PARAM_STR);
+$pdoLiaison->bindValue(':tel', $_POST['tel2'], PDO::PARAM_STR);
+$pdoLiaison->bindValue(':mail', $_POST['email2'], PDO::PARAM_STR);
+//$pdoLiaison->bindValue(':nomFichier', $_POST['profession1'], PDO::PARAM_STR);
+//$pdoLiaison->bindValue(':fileURL', $_POST['profession1'], PDO::PARAM_STR);
+$pdoLiaison->bindValue(':dateNaissance', $_POST['date_naissance2'], PDO::PARAM_STR);
+$pdoLiaison->bindValue(':adresse', $_POST['adesse2'], PDO::PARAM_STR);
+$pdoLiaison->bindValue(':ville', $_POST['ville2'], PDO::PARAM_STR);
+$pdoLiaison->bindValue(':cp', $_POST['tel2'], PDO::PARAM_STR);
+$pdoLiaison->bindValue(':pays', $_POST['pays2'], PDO::PARAM_STR);
+$pdoLiaison->bindValue(':partenariat', $_POST['partenariat2'], PDO::PARAM_STR);
 
 //éxecution de la requête
 $insertIsOK = $pdoLiaison->execute();
 
 if($insertIsOK){
-	$message = 'Le contact a été ajouté dans la bdd';
+	$message = 'Le formulaire de contact a été ajouté dans la bdd';
 }
 else{
 	$message = 'Echec de l\insertion';
