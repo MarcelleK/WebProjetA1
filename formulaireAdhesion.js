@@ -1,6 +1,5 @@
 /*VERSION 3*/
 /*console.log(document.forms["inscription"]["email"]);
-
 document.forms["inscription"].addEventListener("submit", function(e){
 			
 	var erreur;
@@ -52,7 +51,6 @@ document.getElementById("adhesion").addEventListener("submit", function(e){
 	var nom = document.getElementById("nom");
 	var prenom = document.getElementById("prenom");
 	
-
 	if (!prenom.value){
 		erreur="Veuillez renseigner le prénom";
 	}

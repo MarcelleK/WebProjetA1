@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8"/>
+    <title>Formulaire de contact</title>
+    <link rel="shortcut icon" href="../img/Logo1.png">
+    <link rel="stylesheet" type="text/css" href="../css/site.css">
+</head>
+
+<body>
+<section class="billboard light">
+    <header class="wrapper">
+        <a href="#"><img class="logo" src="../img/Logo1.png" alt=""/></a>
+        <nav>
+            <ul>
+                <li><a href="">A propos de nous</a></li>
+                <li><a href="authentification.html">Se connecter</a></li>
+                <li><a href="adhesion.html" target="Adhesion">Adhésion</a></li>
+                <li><a href="" target="Contact">Contactez nous</a></li>
+            </ul>
+        </nav>
+        <div class="title">
+            <h1>EmASso</h1>
+            <hr>
+        </div>
+    </header>
+
+
+    <div class="shadow">
+
+    </div>
+</section>
+
+<section class="formulaireContact">
+    <h2>Formulaire de contact</h2>
+    <h4>*Informations obligatoires</h4>
+    <form class="champformulairecontact" method="POST" action="contactez_nous.php" id="inscription">
+        <body>
+        <fieldset style="border:solid 1px black; padding:1px; width:620px;">
+            <legend><h4 style="text-align:center;">Contact</center></h4></legend>
+    <table>
+            <tr>
+                <th><p align="left"><label for="civilite2">Civilité<em>*</em> :</label></p></th>
+                <td>
+                    <div>
+					    <input type="radio" required="" id="Feminin" name="civilite2" value="feminin" checked><label for="Feminin">Mme</label>
+                        <input type="radio" required="" id="Masculin" name="civilite2" value="masculin" checked><label for="Masculin">M</label>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <th><p align="left"><label for="nom2">Nom<em>*</em> :</label></p></th>
+                <td><input name="nom2"  placeholder="Votre nom" autofocus="" required="" pattern="[a-zA-ZàâæçéèêëîïôœùûüÿÀÂÆÇnÉÈÊËÎÏÔŒÙÛÜŸ-]*"></td>
+		    </tr>
+			
+			<tr>
+                <th><p align="left"><label for="prenom2">Prénom<em>*</em> :</label></p></th>
+                <td><input name="prenom2" placeholder="Votre prénom" autofocus="" required="" pattern="[a-zA-ZàâæçéèêëîïôœùûüÿÀÂÆÇnÉÈÊËÎÏÔŒÙÛÜŸ-]*"></td>
+            </tr>
+
+            <tr>
+                <th><label for="date_adhesion2">Vous souhaitez adhérer le<em>*</em> : </label> </th>
+                <td><input type="date" required="" name="date_adhesion2" min="2019-05-01"></td>
+            </tr>
+			
+            <tr>
+                <th><p align="left"><label for="telephone2">Téléphone : </label> </p></th>
+                <td><input type="int" maxlength="10" name="telephone2" pattern="[0-9]{10}"></td>
+            </tr>
+			
+            <tr>
+                <th><p align="left"><label for="email2">E-mail<em>*</em> : </label> </p> </th>
+                <td><input type="email" name="email2" required=""  placeholder="ex : prenom.nom@xxx.fr"></td>
+            </tr>
+			
+		    <tr>
+                <th><p align="left"><label for="date_naissance2">Date de naissance<em>*</em> : </label> </p> </th>
+                <td><input type="date" name="date_naissance2" max="2001-12-31"></td>
+            </tr>
+			
+            <tr>
+                <th><p align="left"><label for="adresse22">Adresse : </label> </p> </th>
+                <td><input type="text" name="adresse22"></td>
+			</tr>
+			
+			<tr>
+                <th><p align="left"><label for="ville2">Ville : </label> </p></th>
+                <td><input type="text" name="ville2" pattern="[a-zA-ZàâæçéèêëîïôœùûüÿÀÂÆÇnÉÈÊËÎÏÔŒÙÛÜŸ-]*"></td>
+            </tr>
+			
+            <tr>
+                <th><p align="left"><label for="code_postal">Code Postal : </label> </p></th>
+                <td><input type="text" maxlength="5" name="code_postal" pattern="[0-9]{5}"></td>
+			</tr>
+			
+			<tr>
+                <th><p align="left"><label for="pays2">Pays : </label> </p></th>
+                <td><input type="text" name="pays2" pattern="[a-zA-Z ]*"></td>
+            </tr>
+			
+			<tr>
+	            <th><p align="left"><label for="partenaire">Partenariat : </label> </p></th>
+	            <td><select name="partenaire" required="" >
+	                <option value="">--Veuillez choisir--</option>
+		            <option value="Air Liquide Fondation" name="partenaire">Air Liquide Fondation</option>
+                    <option value="Advansa" name="partenaire">Advansa</option>
+		            <option value="Arjowiggins" name="partenaire">Arjowiggins</option>
+                    <option value="Audencia" name="partenaire">Audencia</option>
+		            <option value="Bon Ton Toys" name="partenaire">Bon Ton Toys</option>
+		            <option value="Bouygues Constructeur" name="partenaire">Bouygues Constructeur</option>
+		            <option value="Boralex" name="partenaire">Boralex</option>
+		            <option value="Carrefour" name="partenaire">Carrefour</option>
+		            <option value="Cats Best" name="partenaire">Cats Best</option>
+		            <option value="Caudalie" name="partenaire">Caudalie</option>
+		            <option value="Compagnie Fruitière" name="partenaire">Compagnie Fruitière</option>
+		            <option value="Coca-Cola" name="partenaire">Coca-Cola</option>
+		            <option value="Crédit Coopératif" name="partenaire">Crédit Coopératif</option>
+		            <option value="E-center" name="partenaire">E-center</option>
+		            <option value="FDJ" name="partenaire">FDJ</option>
+		            <option value="Fondation d'Entreprise Hermès" name="partenaire">Fondation d'Entreprise Hermès</option>
+		            <option value="GRDF" name="partenaire">GRDF</option>
+		            <option value="IDKIDS" name="partenaire">IDKIDS</option>
+		            <option value="Kusmi Tea" name="partenaire">Kusmi Tea</option>	
+		            <option value="Michelin" name="partenaire">Michelin</option>
+		            <option value="Mistigriff" name="partenaire">Mistigriff</option>
+		            <option value="SEB" name="partenaire">SEB</option>
+                    <option value="Prospérité Fermière" name="partenaire">Prospérité Fermière</option>				
+		        </select></td>
+		    </tr>
+			
+		</table>
+        </fieldset>
+
+        <p>
+            <input type="submit" value="Envoyer"/>
+            <input type="reset" value="Annuler"/>
+        </p>
+    </form>
+</section>
+<script src="formulaireContact.js"></script>
+</body>
+<!-- récuperation du pied de page pour uniformisation -->
+<section>
+    <footer class="footer">
+        <div class="rights">
+            <p>© EMASso All Rights Reserved 2019</p>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#">A propos de nous</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Contactez nous</a></li>
+            </ul>
+        </nav>
+    </footer>
+</section>
+</html>
