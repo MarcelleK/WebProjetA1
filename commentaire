@@ -1,1 +1,30 @@
 
+/* fichier de javascript permettant la validation du formulaire  d'adhesion */
+
+//fais le lien avec la partie "adhesion" de la page d'authentification de HTML 
+document.getElementById("adhesion").addEventListener("submit", function(e){
+	
+	//initialisation des variables 
+	var erreur;
+	var inputs = this.getElementsByTagName("input"); //récupère toutes les balises inputs de la page d'authentification 
+	
+	//boucle qui indique de renseigner tous les champs, si un champ n'est pas renseignée, l'erreur s'affiche 
+	for (var i=0; i<inputs.length; i++){
+		if (!inputs[i].value){ //input est un tableau qui contient toutes les entrées 
+			erreur = "Veuillez renseigner tous les champs";
+		}
+	}
+	
+	//condition qui permet de retourner l'erreur
+	if (erreur){
+		e.preventDefault();//comportement par defaut 
+		document.getElementById("erreur").innerHTML = erreur;
+		return false;
+	}
+	
+	// si tous les champs sont renseignés, la connexion est valide
+	else{
+		alert('Formulaire envoyé !');
+	}
+
+});
